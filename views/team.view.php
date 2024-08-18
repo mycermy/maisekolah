@@ -1,0 +1,15 @@
+<?php view('partials/head.php') ?>
+<?php view('partials/nav.php') ?>
+<?php view('partials/banner.php', ['heading' => $heading]) ?>
+
+
+<main>
+  <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <!-- Your content -->
+    <?php foreach ($rows as $row) : ?>
+      <li><?= $row['namaMurid'] ?></li>
+    <?php endforeach; ?>
+  </div>
+</main>
+
+<?php view('partials/footer.php') ?>
