@@ -1,10 +1,11 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-$config = require base_path('config.php');
+// authorize(isAuthenticated());
 
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $sql = "SELECT * FROM aktiviti ORDER BY tarikh DESC";
 $rows = $db->query($sql)->get();

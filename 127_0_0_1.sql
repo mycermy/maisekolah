@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `ehadir`
 --
-CREATE DATABASE IF NOT EXISTS `ehadir2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `ehadir2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `ehadir2`;
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `ahli` (
   `noKP` varchar(12) NOT NULL,
   `namaAhli` varchar(255) NOT NULL,
   `kelas` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -47,7 +47,7 @@ CREATE TABLE `aktiviti` (
   `tarikh` date NOT NULL,
   `tempat` varchar(255) NOT NULL,
   `IDGuru` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,7 @@ CREATE TABLE `guru` (
   `IDGuru` varchar(10) NOT NULL,
   `katalaluan` varchar(255) NOT NULL,
   `namaGuru` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `kehadiran` (
   `kodAktiviti` varchar(5) NOT NULL,
   `noKP` varchar(12) NOT NULL,
   `tarikhmasa` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables

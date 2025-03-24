@@ -1,0 +1,18 @@
+START TRANSACTION;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+ALTER TABLE `aktiviti` DROP FOREIGN KEY `aktiviti_ibfk_1`;
+
+ALTER TABLE `guru` CHANGE `IDGuru` `IDGuru` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+
+ALTER TABLE `aktiviti` CHANGE `IDGuru` `IDGuru` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL; 
+
+ALTER TABLE `aktiviti` ADD CONSTRAINT `aktiviti_ibfk_1` FOREIGN KEY (`IDGuru`) REFERENCES `guru`(`IDGuru`) ON DELETE RESTRICT ON UPDATE CASCADE; 
+
+SET FOREIGN_KEY_CHECKS=1;
+
+COMMIT;
+
+-- password
+UPDATE `guru` SET `katalaluan` = '$2y$12$9X3D96g4KEvqAgM5xsrt7eCz5Jh3Wek/lIAEyZWST6RYOO7uPk6Ci' WHERE `guru`.`IDGuru` = 'admin@gmail.com';

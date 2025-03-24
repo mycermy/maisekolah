@@ -1,6 +1,6 @@
-<?php require('partials/head.php') ?>
-<?php require('partials/nav.php') ?>
-<?php require('partials/banner.php') ?>
+<?php view('partials/head.php') ?>
+<?php view('partials/nav.php') ?>
+<?php view('partials/banner.php') ?>
 
 
 <main>
@@ -9,4 +9,4 @@
   </div>
 </main>
 
-<?php ('partials/footer.php') ?>
+<?php view('partials/footer.php') ?>

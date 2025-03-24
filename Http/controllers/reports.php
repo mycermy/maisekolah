@@ -2,6 +2,6 @@
 
 $heading = 'Reports';
 
-view('index.view.php', [
+view('home.view.php', [
     'heading' => $heading,
 ]);

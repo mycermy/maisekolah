@@ -1,10 +1,17 @@
 <?php
 
+namespace Core;
+
 class Validator {
     public static function string($value, $min = 1, $max = INF)
     {
-        $cnt = strlen(trim($value));
-
+        $trimmed = trim($value);
+        // dd(empty($trimmed));
+        if (empty($trimmed)) {
+            return false;
+        }
+        
+        $cnt = strlen($trimmed);
         return $cnt >= $min && $cnt <= $max;
     }
 
